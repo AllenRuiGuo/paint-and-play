@@ -128,6 +128,7 @@
 /* ---------------- CREATIVE SCENE ---------------- */
 
 .creative-scene {
+    display: block;
     position: relative;
     min-height: 420px;
 }
@@ -243,7 +244,7 @@
     }
 
     .creative-scene {
-        min-height: 350px;
+        display: none;
     }
 }
 
@@ -255,31 +256,5 @@
 
     .hero h1 {
         font-size: 3.2rem;
-    }
-
-    .blob {
-        width: 280px;
-        height: 280px;
-
-        right: 20px;
-    }
-
-    .toy-one {
-        width: 145px;
-        height: 145px;
-
-        right: 70px;
-    }
-
-    .toy-two {
-        width: 110px;
-        height: 110px;
-
-        right: 250px;
-    }
-
-    .toy-three {
-        width: 95px;
-        height: 95px;
     }
 }

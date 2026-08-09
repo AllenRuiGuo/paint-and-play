@@ -82,4 +82,12 @@ nav a:hover {
     .mobile-menu {
         display: block;
     }
+
+    .contact-button {
+    padding: 8px 16px;
+    border-radius: 16px;
+    font-size: 0.9rem;
+    font-weight: 800;
+    transition: 0.2s;
+}
 }
