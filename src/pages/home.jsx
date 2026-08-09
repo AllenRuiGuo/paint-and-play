@@ -1,11 +1,15 @@
-import "./App.css";
+import Header from "../components/Header/Header";
 
-function App() {
+function Home() {
     return (
-        <div>
-            <h1>Paint & Play</h1>
-        </div>
+        <>
+            <Header />
+
+            <main>
+                <h1>Paint & Play</h1>
+            </main>
+        </>
     );
 }
 
-export default App;
+export default Home;
