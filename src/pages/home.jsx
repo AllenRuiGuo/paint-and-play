@@ -1,13 +1,12 @@
 import Header from "../components/Header/Header";
+import Hero from "../components/Hero/Hero";
 
 function Home() {
     return (
         <>
             <Header />
+            <Hero />
 
-            <main>
-                <h1>Paint & Play</h1>
-            </main>
         </>
     );
 }
