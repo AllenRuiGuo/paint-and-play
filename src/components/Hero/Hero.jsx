@@ -21,18 +21,18 @@ function Hero() {
                     </h1>
 
                     <p>
-                        Plaster toys, creative painting kits and unforgettable
-                        children's parties — delivered to your door.
+                        Plaster toys, creative painting kits and unforgettable children's parties — everything kids need to paint, create and have fun.
                     </p>
 
-                    <div className="hero-buttons">
-                        <a href="#products" className="btn btn-primary">
+                    <div className="hero-buttons">                       
+                        <a href="#activities" className="btn btn-primary">
+                            Explore Activities
+                        </a>
+
+                        <a href="#products" className="btn btn-secondary">
                             Explore Products
                         </a>
 
-                        <a href="#activities" className="btn btn-secondary">
-                            Explore Activities
-                        </a>
                     </div>
 
                 </div>
