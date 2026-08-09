@@ -1,0 +1,15 @@
+:root {
+    --pink: #ff6fae;
+    --light-pink: #fff0f7;
+    --yellow: #ffd95a;
+    --blue: #69c8ff;
+    --purple: #9b7bff;
+    --green: #7bdcb5;
+
+    --dark: #333044;
+    --white: #ffffff;
+    --cream: #fffaf4;
+
+    --shadow: 0 10px 30px rgba(70, 50, 90, 0.12);
+    --radius: 22px;
+}
