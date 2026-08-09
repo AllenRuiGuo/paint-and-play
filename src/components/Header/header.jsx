@@ -6,23 +6,18 @@ function Header() {
             <div className="nav">
                 <a href="#" className="logo">
                     <div className="logo-icon">🎨</div>
-                    <span>Paint & Play</span>
+                    <span>Plaster Pals</span>
                 </a>
 
-                <nav>
-                    <a href="#shop">Shop</a>
-                    <a href="#parties">Birthday Parties</a>
-                    <a href="#incursions">Vacation Care</a>
-                    <a href="#booking">Book Now</a>
+                <nav>                    
+                    <a href="#activities">Activities</a>
+                    <a href="#products">Products</a>
                 </nav>
 
-                <button className="cart">
-                    🛒 Cart (<span>0</span>)
-                </button>
+                <a href="#contact" className="contact-button">
+                    Contact
+                </a>
 
-                <button className="mobile-menu">
-                    ☰
-                </button>
             </div>
         </header>
     );
