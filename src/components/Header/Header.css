@@ -1,0 +1,80 @@
+.site-header {
+    background: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+}
+
+.nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 900;
+    font-size: 1.35rem;
+    color: var(--pink);
+}
+
+.logo-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: linear-gradient(
+        135deg,
+        var(--pink),
+        var(--purple)
+    );
+    display: grid;
+    place-items: center;
+    color: white;
+    font-size: 1.4rem;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+nav a:hover {
+    color: var(--pink);
+}
+
+.cart {
+    background: var(--dark);
+    color: white;
+    padding: 10px 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    border: none;
+}
+
+.mobile-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+    nav {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+}
