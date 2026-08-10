@@ -3,6 +3,7 @@ import Hero from "../components/Hero/Hero";
 import Activities from "../components/Activities/Activities";
 import Products from "../components/Products/Products";
 import BirthdayParties from "../components/BirthdayParties/BirthdayParties";
+import VacationCare from "../components/VacationCare/VacationCare";
 
 function Home() {
     return (
@@ -12,6 +13,7 @@ function Home() {
             <Activities />
             <Products />
             <BirthdayParties />
+            <VacationCare />
         </>
     );
 }
