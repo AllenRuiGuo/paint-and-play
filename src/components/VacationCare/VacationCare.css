@@ -224,7 +224,7 @@
     }
 
     .vacation-visual {
-        min-height: 400px;
+        display: none;
     }
 }
 
