@@ -49,8 +49,8 @@ function Contact({ isOpen, onClose }) {
 
                             <div>
                                 <h3>Phone</h3>
-                                <a href="tel:0000000000">
-                                    0000 000 000
+                                <a href="tel:0416882295">
+                                    0416 882 295
                                 </a>
                             </div>
                         </div>
@@ -62,10 +62,10 @@ function Contact({ isOpen, onClose }) {
                             </div>
 
                             <div>
-                                <h3>Opening Hours</h3>
+                                <h3>Hotline Hours</h3>
                                 <p>
                                     Monday – Friday<br />
-                                    9:00 am – 5:00 pm
+                                    9:00 am – 1:00 pm
                                 </p>
                             </div>
                         </div>
@@ -78,8 +78,8 @@ function Contact({ isOpen, onClose }) {
 
                             <div>
                                 <h3>Email</h3>
-                                <a href="mailto:hello@plasterpals.com.au">
-                                    hello@plasterpals.com.au
+                                <a href="mailto:plasterpals@gmail.com">
+                                    plasterpals@gmail.com
                                 </a>
                             </div>
                         </div>

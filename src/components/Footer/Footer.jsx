@@ -36,8 +36,8 @@ function Footer() {
                         We'd love to hear from you!
                     </p>
 
-                    <a href="mailto:hello@plasterpals.com.au">
-                        hello@plasterpals.com.au
+                    <a href="mailto:plasterpals@gmail.com">
+                        plasterpals@gmail.com
                     </a>
                 </div>
 
