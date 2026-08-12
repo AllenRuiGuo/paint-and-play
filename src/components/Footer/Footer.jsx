@@ -8,7 +8,7 @@ function Footer() {
                 <div className="footer-brand">
                     <a href="#" className="footer-logo">
                         <img
-                            src={`${import.meta.env.BASE_URL}logo.png`}
+                            src={`${import.meta.env.BASE_URL}favicon.png`}
                             alt="Plaster Pals"
                         />
                     </a>
