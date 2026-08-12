@@ -19,7 +19,7 @@ function Contact({ isOpen, onClose }) {
 
     formData.append(
         "access_key",
-        "YOUR_WEB3FORMS_ACCESS_KEY"
+        "8e7a3ce3-1ac8-43e4-a5cf-049500dd41b5"
     );
 
     const object = Object.fromEntries(formData);
