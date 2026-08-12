@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Contact.css";
 
 function Contact({ isOpen, onClose }) {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitMessage, setSubmitMessage] = useState("");
+
+    useEffect(() => { if (isOpen) { setSubmitMessage(""); setIsSubmitting(false); } }, [isOpen]);
 
     if (!isOpen) {
         return null;
