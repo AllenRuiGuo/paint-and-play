@@ -107,8 +107,8 @@ function Contact({ isOpen, onClose }) {
 
                             <div>
                                 <h3>Phone</h3>
-                                <a href="tel:0416882295">
-                                    0416 882 295
+                                <a href="tel:0421910776">
+                                    0421 910 776
                                 </a>
                             </div>
                         </div>
