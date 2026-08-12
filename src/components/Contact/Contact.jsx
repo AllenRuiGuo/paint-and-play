@@ -1,9 +1,65 @@
+import { useState } from "react";
 import "./Contact.css";
 
 function Contact({ isOpen, onClose }) {
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitMessage, setSubmitMessage] = useState("");
+
     if (!isOpen) {
         return null;
     }
+
+    const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    setIsSubmitting(true);
+    setSubmitMessage("");
+
+    const formData = new FormData(event.target);
+
+    formData.append(
+        "access_key",
+        "YOUR_WEB3FORMS_ACCESS_KEY"
+    );
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    try {
+        const response = await fetch(
+            "https://api.web3forms.com/submit",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                },
+                body: json,
+            }
+        );
+
+        const result = await response.json();
+
+        if (result.success) {
+            setSubmitMessage(
+                "Thank you! Your message has been sent."
+            );
+
+            event.target.reset();
+        } else {
+            setSubmitMessage(
+                "Something went wrong. Please try again."
+            );
+        }
+
+        } catch (error) {
+            setSubmitMessage(
+                "Something went wrong. Please try again."
+            );
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
 
     return (
         <div className="contact-modal-overlay" onClick={onClose}>
@@ -78,8 +134,8 @@ function Contact({ isOpen, onClose }) {
 
                             <div>
                                 <h3>Email</h3>
-                                <a href="mailto:plasterpals@gmail.com">
-                                    plasterpals@gmail.com
+                                <a href="mailto:help.plasterpals@gmail.com">
+                                    help.plasterpals@gmail.com
                                 </a>
                             </div>
                         </div>
@@ -93,7 +149,19 @@ function Contact({ isOpen, onClose }) {
 
                     <h3>Send us a message</h3>
 
-                    <form className="contact-form">
+                    <form className="contact-form" onSubmit={handleSubmit}>
+
+                        <input
+                            type="hidden"
+                            name="subject"
+                            value="New enquiry from Plaster Pals website"
+                        />
+
+                        <input
+                            type="checkbox"
+                            name="botcheck"
+                            style={{ display: "none" }}
+                        />
 
                         <div className="form-group">
                             <label htmlFor="contact-name">
@@ -124,6 +192,38 @@ function Contact({ isOpen, onClose }) {
                             />
                         </div>
 
+                        <div className="form-group">
+                            <label htmlFor="enquiry-type">
+                                What can we help you with?
+                            </label>
+
+                            <select
+                                id="enquiry-type"
+                                name="enquiry_type"
+                                defaultValue=""
+                                required
+                            >
+                                <option value="" disabled>
+                                    Please select
+                                </option>
+
+                                <option value="General Enquiry">
+                                    General Enquiry
+                                </option>
+
+                                <option value="Birthday Party">
+                                    Birthday Party
+                                </option>
+
+                                <option value="Vacation Care">
+                                    Vacation Care
+                                </option>
+
+                                <option value="Products">
+                                    Products
+                                </option>
+                            </select>
+                        </div>
 
                         <div className="form-group">
                             <label htmlFor="contact-message">
@@ -143,9 +243,16 @@ function Contact({ isOpen, onClose }) {
                         <button
                             type="submit"
                             className="contact-submit"
+                            disabled={isSubmitting}
                         >
-                            Send Message
-                        </button>
+                            {isSubmitting ? "Sending..." : "Send Message"}
+                        </button>   
+
+                        {submitMessage && (
+                            <p className="contact-submit-message">
+                                {submitMessage}
+                            </p>
+                        )}
 
                     </form>
 
