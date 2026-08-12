@@ -1,6 +1,6 @@
 import "./Header.css";
 
-function Header() {
+function Header({ onContactClick }) {
     return (
         <header className="site-header">
             <div className="nav">
@@ -20,9 +20,13 @@ function Header() {
                     <a href="#products">Products</a>
                 </nav>
 
-                <a href="#contact" className="contact-button">
-                    Contact
-                </a>
+                <button 
+                    type="button" 
+                    className="contact-button" 
+                    onClick={onContactClick} 
+                > 
+                    Contact 
+                </button>
 
             </div>
         </header>
