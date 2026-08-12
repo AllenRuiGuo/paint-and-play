@@ -7,7 +7,7 @@ function Header({ onContactClick }) {
                 <a href="#" className="logo">
                     <div className="logo-icon">
                         <img
-                            src="/logo.png"
+                            src={`${import.meta.env.BASE_URL}logo.png`}
                             alt="Plaster Pals"
                             className="logo-image"
                         />
