@@ -1,6 +1,6 @@
 import "./VacationCare.css";
 
-function VacationCare() {
+function VacationCare({ onContactClick }) {
     return (
         <section id="vacation-care" className="vacation-section">
 
@@ -81,9 +81,13 @@ function VacationCare() {
 
                     </div>
 
-                    <a href="#contact" className="vacation-button">
+                    <button
+                        type="button"
+                        className="vacation-button"
+                        onClick={onContactClick}
+                    >
                         Enquire About Vacation Care
-                    </a>
+                    </button>
 
                 </div>
 

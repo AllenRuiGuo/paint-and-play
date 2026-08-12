@@ -99,17 +99,15 @@
 /* ---------------- BUTTON ---------------- */
 
 .vacation-button {
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
     display: inline-block;
-
     background: #5bbde8;
     color: var(--white);
-
     padding: 14px 22px;
-
     border-radius: 30px;
-
     font-weight: 800;
-
     transition: 0.2s;
 }
 
