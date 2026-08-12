@@ -1,6 +1,6 @@
 import "./BirthdayParties.css";
 
-function BirthdayParties() {
+function BirthdayParties({ onContactClick }) {
     return (
         <section id="parties" className="birthday-section">
 
@@ -60,9 +60,13 @@ function BirthdayParties() {
 
                     </div>
 
-                    <a href="#contact" className="birthday-button">
+                    <button
+                        type="button"
+                        className="birthday-button"
+                        onClick={onContactClick}
+                    >
                         Enquire About a Party
-                    </a>
+                    </button>
 
                 </div>
 
